@@ -1,34 +1,31 @@
 import { createTheme } from '@mui/material/styles';
 
+
+declare module '@mui/material/styles' {
+  interface Palette {
+    footer?: Palette['primary'];
+  }
+  interface PaletteOptions {
+    footer?: PaletteOptions['primary'];
+  }
+}
+
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1A237E', 
+      main: '#EC407A',
     },
     secondary: {
-      main: '#F57C00', 
+      main: '#8a3f93',
     },
     background: {
-      default: '#F4F6F8', 
+      default: '#090A0F',
+    },
+    footer: {
+      main: '#111',
     },
     text: {
-      primary: '#333333',
-      secondary: '#666666',
-    },
-  },
-  typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    h1: {
-      fontWeight: 700,
-      fontSize: '2.5rem',
-      color: '#1A237E',
-    },
-    h2: {
-      fontWeight: 600,
-      fontSize: '2rem',
-    },
-    body1: {
-      fontSize: '1rem',
+      primary: '#FFFFFF',
     },
   },
 });

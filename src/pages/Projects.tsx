@@ -1,37 +1,44 @@
-import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import ProjectCard from '../components/ProjectCard';
+import React from "react";
+import Grid from "@mui/material/Unstable_Grid2";
+import { Box } from "@mui/material";
+import ProjectCard from "../components/ProjectCard";
+import Header from "../components/Header";
+
+import collegeInvaders from "../assets/collegeInvaders.png";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A brief description of project one.",
-    image: "/path/to/image1.jpg",
-    projectLink: "https://github.com/yourusername/project-one"
+    title: "College Invaders",
+    description:
+      "College Invaders is a Space-Invaders-style arcade game with a Brooklyn College theme, developed using HTML, CSS, and JavaScript with the Phaser 3 framework. The game features engaging 2D graphics, animations, and collision detection, providing an exciting gameplay experience.",
+    image: collegeInvaders,
+    projectLink: "https://github.com/muhammadmuzaib/CollegeInvaders",
   },
   {
     title: "Project Two",
     description: "A brief description of project two.",
     image: "/path/to/image2.jpg",
-    projectLink: "https://github.com/yourusername/project-two"
+    projectLink: "https://github.com/yourusername/project-two",
   },
-  // Add more projects as needed
 ];
 
 const Projects: React.FC = () => {
   return (
-    <Grid container spacing={4} sx={{ mt: 2 }}>
-      {projects.map((project, index) => (
-        <Grid key={index} xs={12} sm={6} md={4}>
-          <ProjectCard
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            projectLink={project.projectLink}
-          />
-        </Grid>
-      ))}
-    </Grid>
+    <Box>
+      <Header />
+      <Grid container spacing={4} sx={{ mt: 2 }}>
+        {projects.map((project, index) => (
+          <Grid key={index} xs={12} sm={6} md={4}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              projectLink={project.projectLink}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 };
 
