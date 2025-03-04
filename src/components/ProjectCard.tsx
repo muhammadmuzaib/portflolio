@@ -5,6 +5,8 @@ import {
   CardMedia,
   Typography,
   CardActionArea,
+  CardActions,
+  Button,
 } from "@mui/material";
 
 interface ProjectCardProps {
@@ -12,6 +14,7 @@ interface ProjectCardProps {
   description: string;
   image: string;
   projectLink: string;
+  demoLink: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,6 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   image,
   projectLink,
+  demoLink,
 }) => {
   return (
     <Card
@@ -54,6 +58,38 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Typography>
         </CardContent>
       </CardActionArea>
+      <CardActions>
+        <Button
+          size="small"
+          color="primary"
+          sx={{
+            backgroundColor: "primary.secondary",
+            "&hover": {
+              backgroundColor: "primary.secondary",
+            },
+          }}
+          href={projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </Button>
+        <Button
+          size="small"
+          color="primary"
+          sx={{
+            backgroundColor: "primary.secondary",
+            "&hover": {
+              backgroundColor: "primary.secondary",
+            },
+          }}
+          href={demoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Demo
+        </Button>
+      </CardActions>
     </Card>
   );
 };

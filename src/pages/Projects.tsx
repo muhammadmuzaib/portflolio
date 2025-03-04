@@ -13,12 +13,14 @@ const projects = [
       "College Invaders is a Space-Invaders-style arcade game with a Brooklyn College theme, developed using HTML, CSS, and JavaScript with the Phaser 3 framework. The game features engaging 2D graphics, animations, and collision detection, providing an exciting gameplay experience.",
     image: collegeInvaders,
     projectLink: "https://github.com/muhammadmuzaib/CollegeInvaders",
+    demoLink: "https://muhammadmuzaib.github.io/CollegeInvaders/",
   },
   {
     title: "Project Two",
     description: "A brief description of project two.",
     image: "/path/to/image2.jpg",
     projectLink: "https://github.com/yourusername/project-two",
+    demoLink: "https://yourusername.github.io/project-two/",
   },
 ];
 
@@ -34,6 +36,7 @@ const Projects: React.FC = () => {
               description={project.description}
               image={project.image}
               projectLink={project.projectLink}
+              demoLink={project.demoLink}
             />
           </Grid>
         ))}
