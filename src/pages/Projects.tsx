@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid2";
 import { Box } from "@mui/material";
 import ProjectCard from "../components/ProjectCard";
 import Header from "../components/Header";
@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
       <Header />
       <Grid container spacing={4} sx={{ mt: 2 }}>
         {projects.map((project, index) => (
-          <Grid key={index} xs={12} sm={6} md={4}>
+          <Grid key={index} size={{ xs: 12, sm: 6, md: 4 }}>
             <ProjectCard
               title={project.title}
               description={project.description}
