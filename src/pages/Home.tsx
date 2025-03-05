@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Avatar } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2";
+import Grid2 from "@mui/material/Grid2";
 
 import avatar from "../assets/avatar.svg";
 import illustration from "../assets/home-main.svg";
@@ -27,7 +27,7 @@ const Home: React.FC = () => {
         }}
       >
         <Grid2 container spacing={4} alignItems="center">
-          <Grid2 xs={12} md={6}>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <Typography variant="h4" sx={{ mb: 2 }}>
               Hi There!{" "}
               <span role="img" aria-label="wave">
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
               through collaboration and agile best practices.
             </Typography>
           </Grid2>
-          <Grid2 xs={12} md={6} sx={{ textAlign: "center" }}>
+          <Grid2 size={{ xs: 12, md: 6 }} sx={{ textAlign: "center" }}>
             <Box
               component="img"
               src={ILLUSTRATION_URL}
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Grid2 xs={12} md={4}>
+          <Grid2 size={{ xs: 12, md: 4 }}>
             <Avatar
               alt="Profile"
               src={AVATAR_URL}
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
             />
           </Grid2>
 
-          <Grid2 xs={12} md={6} mt={6}>
+          <Grid2 size={{ xs: 12, md: 6 }} mt={6}>
             <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.7 }}>
               I fell in love with programming and I have at least learned
               something, I think. I am fluent in Java, TypeScript, React. My
